@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Bad Habits 하이라이트</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700;900&display=swap">
+<style>
+/* Layout: one dark screen, the video first, a short caption under it — sized for a phone held after scanning a QR */
+:root {
+  --bg: #15110f;
+  --panel: #241c18;
+  --fg: #f3ece6;
+  --muted: #b3a79e;
+  --gold: #ffd84a;
+  --ember: #c98a10;
+  --font-body: 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', system-ui, sans-serif;
+  color-scheme: dark;
+}
+html { background: var(--bg); }
+body { margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 20px 32px;
+}
+main { max-width: 960px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
+header { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+h1 { margin: 0; font-size: clamp(26px, 6vw, 40px); font-weight: 900; color: var(--gold); letter-spacing: 0.01em; text-wrap: balance; }
+.team { font-size: 15px; font-weight: 700; color: var(--muted); }
+video {
+  width: 100%; max-width: 100%; aspect-ratio: 16 / 10; display: block;
+  background: #000; border-radius: 10px; border: 2px solid var(--ember);
+}
+.lede { margin: 0; font-size: 16px; line-height: 1.6; max-width: 60ch; }
+.facts { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.facts li { background: var(--panel); color: var(--fg); border-radius: 999px; padding: 4px 12px; font-size: 13px; font-weight: 700; }
+.facts b { color: var(--gold); }
+footer { font-size: 13px; color: var(--muted); line-height: 1.6; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Bad Habits</h1>
+    <span class="team">경희대학교 · 브릿</span>
+  </header>
+
+  <video id="highlight" src="highlight.mp4" poster="poster.jpg" controls playsinline preload="metadata"></video>
+
+  <p class="lede">싸우는 동안 플레이어의 전투습관을 읽은 AI가, 그 플레이어만 노리는 보스전을 짜는 픽셀 액션 게임입니다. 모든 그리모어와 보스, 최종 보스전까지 담은 하이라이트 영상이에요.</p>
+
+  <ul class="facts">
+    <li>그리모어 <b>5</b> · 스킬 <b>35</b></li>
+    <li>보스 <b>5</b></li>
+    <li>기록하는 전투습관 <b>50+</b></li>
+    <li>3분 38초</li>
+  </ul>
+
+  <footer>2026 SW중심대학 연합 AI·SW페스티벌 · 팀장 남궁호민 · 팀원 이승현</footer>
+</main>
+</body>
+</html>
